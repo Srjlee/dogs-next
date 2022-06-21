@@ -6,15 +6,31 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "migrate": "env-cmd sequelize db:migrate",
+    "migrate:rollback": "env-cmd sequelize-cli db:migrate:undo",
+    "migrate:rollback:all": "env-cmd sequelize-cli db:migrate:undo:all"
   },
   "dependencies": {
+    "@algolia/autocomplete-core": "^1.6.3",
+    "@chakra-ui/icons": "^2.0.2",
+    "axios": "^0.27.2",
+    "env-cmd": "^10.1.0",
     "next": "12.1.6",
+    "pg": "^8.7.3",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "redux": "^4.2.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.4.1",
+    "sequelize": "^6.19.1",
+    "sqlite": "^4.1.1",
+    "sqlite3": "^5.0.8"
   },
   "devDependencies": {
     "eslint": "8.18.0",
-    "eslint-config-next": "12.1.6"
+    "eslint-config-next": "12.1.6",
+    "sequelize-cli": "^6.4.1"
   }
 }
