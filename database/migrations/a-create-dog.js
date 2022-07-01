@@ -8,9 +8,15 @@ module.exports = {
         weight: {type: Sequelize.STRING,allowNull: false},
         life_span: {type: Sequelize.STRING},
         image: {type: Sequelize.STRING},
-    }, {
-      timestamps: false
-    });
+        createdAt: {
+          allowNull: false,
+          type: Sequelize.DATE
+        },
+        updatedAt: {
+          allowNull: false,
+          type: Sequelize.DATE
+        }
+    }, );
     },
     async down(queryInterface) {
       await queryInterface.dropTable('dogs');
